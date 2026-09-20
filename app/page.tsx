@@ -189,7 +189,7 @@ export default function Home() {
   </div>
 
   <a
-    href="https://www.google.com/maps/dir/?api=1&destination=44.6963,8.0361"
+   href="https://www.google.com/maps/search/?api=1&query=Powy%20Via%20S.%20Paolo%205%2C%20Alba%2C%20Italy"
     target="_blank"
     rel="noopener noreferrer"
     className="mt-4 flex items-center justify-center rounded-2xl bg-[#4F694C] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#435B40]"
