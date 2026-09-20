@@ -166,7 +166,37 @@ export default function Home() {
             allowFullScreen
           />
         </div>
+{/* Featured charging station */}
+<div className="mt-5 rounded-[24px] bg-white p-5 shadow-sm">
+  <div className="flex items-start gap-3">
+    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[#EEF4EC]">
+      <Zap
+        size={19}
+        className="text-[#4F694C]"
+        strokeWidth={2.2}
+      />
+    </div>
 
+    <div className="min-w-0">
+      <h2 className="font-semibold text-stone-900">
+        Piazza San Paolo
+      </h2>
+
+      <p className="mt-1 text-sm text-stone-500">
+        Powy · 2 × 22 kW AC · Type 2
+      </p>
+    </div>
+  </div>
+
+  <a
+    href="https://www.google.com/maps/dir/?api=1&destination=44.6963,8.0361"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4 flex items-center justify-center rounded-2xl bg-[#4F694C] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#435B40]"
+  >
+    Get directions
+  </a>
+</div>
       </div>
     </main>
   );
