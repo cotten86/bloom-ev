@@ -20,9 +20,7 @@ export default function Home() {
 
   const showCurrentPosition = () => {
     if (!navigator.geolocation) {
-      alert(
-        "La geolocalizzazione non è supportata da questo dispositivo."
-      );
+      alert("Geolocation is not supported by this device.");
       return;
     }
 
@@ -33,9 +31,7 @@ export default function Home() {
         );
       },
       () => {
-        alert(
-          "Impossibile ottenere la posizione."
-        );
+        alert("Unable to get your location.");
       },
       {
         enableHighAccuracy: true,
@@ -78,7 +74,7 @@ export default function Home() {
               />
 
               <span className="text-sm font-medium text-[#4F694C]">
-                Ricarica EV
+                EV Charging
               </span>
             </div>
 
@@ -86,16 +82,16 @@ export default function Home() {
 
           <div className="mt-3">
             <h1 className="text-xl font-semibold text-stone-900">
-              Colonnine di ricarica
+              Charging stations
             </h1>
 
             <p className="mt-1 text-sm text-stone-500">
-              Cerca una stazione vicino a Plaza View
+              Find a charging station near Plaza View
             </p>
           </div>
         </header>
 
-        {/* Suggerimento Bloom */}
+        {/* Bloom Tip */}
         <div className="mb-5 rounded-[24px] bg-[#EEF4EC] p-5">
 
           <div className="flex items-center gap-2">
@@ -106,40 +102,39 @@ export default function Home() {
             />
 
             <p className="font-semibold text-[#4F694C]">
-              Suggerimento Bloom
+              Bloom Tip
             </p>
           </div>
 
           <ul className="mt-4 space-y-3 text-sm leading-6 text-stone-700">
 
             <li>
-              • Consenti al browser di accedere alla tua
-              posizione per visualizzare le colonnine più
-              vicine a te.
+              • Allow your browser to access your location
+              to find the charging stations closest to you.
             </li>
 
             <li>
-              • Se ti trovi lontano dall'appartamento,
-              utilizza il pulsante{" "}
+              • If you are away from the apartment, use the{" "}
               <span className="font-medium text-stone-900">
-                "Vicino a me"
+                "Near me"
               </span>{" "}
-              per centrare la mappa sulla tua posizione.
+              button to center the map on your current
+              location.
             </li>
 
             <li>
-              • Tocca l'icona{" "}
+              • Tap the{" "}
               <span className="font-medium text-stone-900">
-                Filtri
+                Filters
               </span>{" "}
-              della mappa per scegliere il tipo di
-              connettore e la velocità di ricarica.
+              icon on the map to choose the connector type
+              and charging speed.
             </li>
 
           </ul>
         </div>
 
-        {/* Pulsanti */}
+        {/* Buttons */}
         <div className="mb-1 flex gap-3">
 
           <button
@@ -155,16 +150,16 @@ export default function Home() {
             className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#4F694C] py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#435B40]"
           >
             <LocateFixed size={18} />
-            Vicino a me
+            Near me
           </button>
 
         </div>
 
-        {/* Mappa */}
+        {/* Map */}
         <div className="mt-5 overflow-hidden rounded-[32px]">
           <iframe
             src={mapUrl}
-            title="Mappa delle colonnine di ricarica"
+            title="EV charging station map"
             className="h-[78vh] w-full"
             loading="lazy"
             allow="geolocation"
